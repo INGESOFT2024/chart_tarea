@@ -37,7 +37,7 @@
                                 <a class="dropdown-item nav-link text-white " href="/aplicaciones/nueva"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Subitem</a>
                             </li>
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="../../nuevoMVC/productos"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Productos</a>
+                                <a class="dropdown-item nav-link text-white " href="/chart_prueba/productos/estadisticas"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Productos</a>
                             </li>
                     
                         

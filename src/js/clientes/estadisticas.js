@@ -15,31 +15,31 @@ const data = {
     }]
 };
 
-const chartProducto = new Chart(ctx, {
+const chartCliente = new Chart(ctx, {
     type: 'bar',
     data: data,
 });
 
 const getEstadisticas = async () => {
-    const url = '/chart_prueba/API/detalle/estadisticas';
+    const url = '/chart_tarea/API/detalle/estadisticas';
     const config = { method: "GET" };
     const response = await fetch(url, config);
     const data = await response.json();
 
     if (data) {
-        if (chartProducto.data.datasets[0]) {
-            chartProducto.data.labels = [];
-            chartProducto.data.datasets[0].data = [];
-            chartProducto.data.datasets[0].backgroundColor = [];
+        if (chartCliente.data.datasets[0]) {
+            chartCliente.data.labels = [];
+            chartCliente.data.datasets[0].data = [];
+            chartCliente.data.datasets[0].backgroundColor = [];
 
             data.forEach(r => {
-                chartProducto.data.labels.push(r.producto);
-                chartProducto.data.datasets[0].data.push(r.cantidad);
-                chartProducto.data.datasets[0].backgroundColor.push(generateRandomColor());
+                chartCliente.data.labels.push(r.cliente);
+                chartCliente.data.datasets[0].data.push(r.cantidad);
+                chartCliente.data.datasets[0].backgroundColor.push(generateRandomColor());
             });
         }
     }
-    chartProducto.update();
+    chartCliente.update();
 };
 
 const generateRandomColor = () => {
